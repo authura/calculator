@@ -1,16 +1,27 @@
 const displayValue = document.getElementById('display');
-const calcButtons = document.querySelector('.button-container');
+const calcButtons = document.querySelectorAll('.btn');
 const clear = document.getElementById('clear');
 const clearAll = document.getElementById('clear-all');
-const addition = document.getElementById('add');
-const subtraction = document.getElementById('subtract');
-const multiplication = document.getElementById('multiply');
-const division = document.getElementById('divide');
+const operators = document.querySelectorAll('#operator');
 const digits = document.querySelectorAll('#digit');
+let num1 = '';
+let num2 = '';
+let operator = '';
 
-calcButtons.addEventListener('click', () => {
-    
-})
+
+//UNFINISHED
+digits.forEach((digit) => {
+    digit.addEventListener('click', () => {
+        displayValue.innerHTML = digit.innerHTML;
+    })
+});
+
+operators.forEach((operatorValue) => {
+    operatorValue.addEventListener('click', () => {
+        operator = operatorValue.innerHTML;
+    })
+});
+
 
 
 //Basic Operations
@@ -56,6 +67,8 @@ const operate = (operator, num1, num2) => {
             return divide(num1, num2);
     }
 }
+
+
 
 
 
