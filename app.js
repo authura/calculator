@@ -4,6 +4,8 @@ const clear = document.getElementById('clear');
 const clearAll = document.getElementById('clear-all');
 const operators = document.querySelectorAll('#operator');
 const digits = document.querySelectorAll('#digit');
+const equals = document.querySelector('#equals');
+let number = '';
 let num1 = '';
 let num2 = '';
 let operator = '';
@@ -11,13 +13,25 @@ let operator = '';
 
 //UNFINISHED
 digits.forEach((digit) => {
-    digit.addEventListener('click', () => {
-        displayValue.innerHTML = digit.innerHTML;
+    digit.addEventListener('click', () => { 
+        number += digit.innerHTML;
+        displayValue.innerHTML = number;
     })
 });
 
 operators.forEach((operatorValue) => {
     operatorValue.addEventListener('click', () => {
+        if (num1 !== ''){
+            num2 === number;
+        } else {
+            num1 === number;
+        }
+        console.log(number);
+        if(operator !== '') {
+            alert('Only one operator is allowed')
+        } else if(number === '') {
+            alert("Please enter a number first")
+        }
         operator = operatorValue.innerHTML;
     })
 });
