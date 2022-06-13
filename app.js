@@ -29,5 +29,5 @@ const divide = (x, y) => {
     return quotient;
 }
 
-console.log(add(2, 2));
+
 
