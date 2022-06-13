@@ -13,18 +13,30 @@ let operator = '';
 
 //UNFINISHED
 digits.forEach((digit) => {
-    digit.addEventListener('click', () => { 
-        number += digit.innerHTML;
-        displayValue.innerHTML = number;
+   
+    digit.addEventListener('click', () => {
+        
+             if(operator !== '' && number !== '') {
+                number = '';
+            } 
+            number += digit.innerHTML;
+            displayValue.innerHTML = number;
+        
+           
     })
 });
+
+const clearDisplay = () => {
+    displayValue.innerHTML = ''
+    number = displayValue.innerHTML;
+}
 
 operators.forEach((operatorValue) => {
     operatorValue.addEventListener('click', () => {
         if (num1 !== ''){
-            num2 === number;
+            num2 = number;
         } else {
-            num1 === number;
+            num1 = number;
         }
         console.log(number);
         if(operator !== '') {
