@@ -1,20 +1,33 @@
+const displayValue = document.getElementById('display');
+const calcButtons = document.querySelector('.btn');
+const clear = document.getElementById('clear');
+const clearAll = document.getElementById('clear-all');
+const addition = document.getElementById('add');
+const subtraction = document.getElementById('subtract');
+const multiplication = document.getElementById('multiply');
+const division = document.getElementById('divide');
+
+
 //Basic Operations
-add = (x, y) => {
-    sum = parseFloat(x) + parseFloat(y);
+const add = (x, y) => {
+    const sum = parseFloat(x) + parseFloat(y);
     return sum;
 }
 
-subtract = (x, y) => {
-    difference = parseFloat(x) - parseFloat(y);
+const subtract = (x, y) => {
+    const difference = parseFloat(x) - parseFloat(y);
     return difference;
 }
 
-multiply = (x, y) => {
-    product = parseFloat(x) * parseFloat(y);
+const multiply = (x, y) => {
+    const product = parseFloat(x) * parseFloat(y);
     return product;
 }
 
-divide = (x, y) => {
-    quotient = parseFloat(x) / parseFloat(y);;
+const divide = (x, y) => {
+    const quotient = parseFloat(x) / parseFloat(y);;
     return quotient;
 }
+
+console.log(add(2, 2));
+
